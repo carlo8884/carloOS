@@ -41,18 +41,29 @@ export default function JoinProPage({
       ]}
     >
       <div className="carloOS-article">
-        <h2>What you get</h2>
-        <ul>
-          <li>A page on dog.com you can point clients to</li>
-          <li>Your service area and a contact path you control</li>
-          <li>The ability to update copy when accounts exist</li>
-        </ul>
-        <h2>What you do not get yet</h2>
-        <ul>
-          <li>Payments through Dog.com</li>
-          <li>A “verified by Dog.com” badge</li>
-          <li>Guaranteed ranking in search</li>
-        </ul>
+        <h2>What a claimed page includes</h2>
+        <div className="not-prose my-6 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-xl border border-stone-200 bg-white p-5">
+            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+              What you get
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-stone-800">
+              <li>A page on dog.com you can point clients to</li>
+              <li>Your service area and a contact path you control</li>
+              <li>The ability to update copy when accounts exist</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+            <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+              What you do not get yet
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-stone-700">
+              <li>Payments through Dog.com</li>
+              <li>A “verified by Dog.com” badge</li>
+              <li>Guaranteed ranking in search</li>
+            </ul>
+          </div>
+        </div>
         <h2>How review works</h2>
         <ol>
           <li>You send the form below with your service area and a public link (website or business profile).</li>
