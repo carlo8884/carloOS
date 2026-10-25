@@ -9,9 +9,12 @@ export function InquireOfferScreen({
   siteName: string
   heroKey: string
 }) {
+  // Hero photo must fill the whole section: ImageCard's inner frame carries an inline
+  // 16:9 aspect-ratio, so force it to full height or tall/wide viewports show an
+  // empty band under the photo.
   return (
     <section className="relative min-h-[calc(100vh-68px)] flex items-center justify-center px-4 py-10">
-      <div className="absolute inset-0 overflow-hidden [&>figure]:absolute [&>figure]:inset-0 [&>figure]:m-0 [&>figure]:h-full [&>figure]:w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+      <div className="absolute inset-0 overflow-hidden [&>figure]:absolute [&>figure]:inset-0 [&>figure]:m-0 [&>figure]:h-full [&>figure]:w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&>figure>div]:!h-full [&>figure>div]:!aspect-auto [&>figure>div]:!rounded-none">
         <StockImage manifestKey={heroKey} alt="" aspect="16:9" variant="inline" priority subtleCredit />
       </div>
       <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
