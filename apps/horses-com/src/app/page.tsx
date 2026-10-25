@@ -216,12 +216,9 @@ export default function HomePage() {
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where to start</h2>
             </div>
             <Link href="/breeds" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-              <div className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
-                <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
-              </div>
               <div className="pr-3 py-2">
                 <div className="mb-1">
-                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides</span>
+                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides <span aria-hidden="true">→</span></span>
                 </div>
                 <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
                   <span>Conformation and genetic panels.</span>
