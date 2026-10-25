@@ -1,7 +1,4 @@
 import Link from 'next/link'
-import { StockImage } from '@carloOS/ui'
-
-const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 const START_LINKS = [
   {
@@ -38,11 +35,8 @@ export function HomeEmailCapture() {
             href="/first-horse-roadmap"
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
           >
-            <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="horses-com:guide-saddle-fit" alt="A horse and rider working in tack at the canter" aspect="4:3" subtleCredit />
-            </div>
-            <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight group-hover:text-brand-primary">90-day roadmap</div>
+            <div className="px-3 py-2">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight group-hover:text-brand-primary">90-day roadmap <span aria-hidden="true">&rarr;</span></div>
               <p className="text-xs text-brand-text-mid mt-0.5">Decide before you buy.</p>
             </div>
           </Link>
