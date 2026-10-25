@@ -2103,3 +2103,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://horses-com-git-bot-inquire-hero-fill-carlo-tabibi-s-projects.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~13:15 PDT hour
+1. Dog.com /join/pro claimed-directory shell: the "What you get" and "What you do not get yet" bullet lists were two plain stacked lists. They're now two clean side-by-side cards under one "What a claimed page includes" heading (white card vs muted card, stacking on mobile). Same copy, no new claims. PR #2928.
+2. Markup and classes only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Fish.com homepage, Horses homepage, Dog /trainers, Horses /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://dog-com-git-bot-dog-joinpro-comp-54649c-carlo-tabibi-s-projects.vercel.app/join/pro · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
