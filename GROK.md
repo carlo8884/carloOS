@@ -2042,3 +2042,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~07:30 PDT hour
+1. Horses.com homepage polish: the body condition score band's aside carried a decorative horse photo (horses-com:tool-bcs-calculator) stacked above the Henneke tool links. It's gone, so the aside reads as clean text beside the calculator, following #2914 (All breed guides action as clean text). Fish.com homepage is already down to one credited hero photo plus clean text. PR #2916.
+2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone. Next candidates: Horses homepage small featured thumbs (horses-com:featured-quarter-horse, horses-com:category-care) and the email-capture side photo.
+3. Preview URLs: https://horses-com-git-bot-horses-bcs-dr-f80f55-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
