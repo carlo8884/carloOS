@@ -2010,7 +2010,7 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 ---
 
 ## 2026-10-24 ~17:14 PDT hour
-1. Fish.com homepage polish: the "Before you buy the tank" band's All setup guides action carried a decorative planted-tank photo chip (fish-com:category-planted). It's now a clean text link with an arrow, matching the All species guides (#2907), All calculators (#2905), Health guides (#2903) and Editorial standards (#2901) actions, so the homepage reads as one credited hero photo plus clean text like dog.com. PR #PRNUM.
+1. Fish.com homepage polish: the "Before you buy the tank" band's All setup guides action carried a decorative planted-tank photo chip (fish-com:category-planted). It's now a clean text link with an arrow, matching the All species guides (#2907), All calculators (#2905), Health guides (#2903) and Editorial standards (#2901) actions, so the homepage reads as one credited hero photo plus clean text like dog.com. PR #2909.
 2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire + homepage and shared Footer inquire left alone. Next candidate: Fish water-safety header action thumb (fish-com:water-parameters-hero), same pattern.
 3. Preview URLs: PRPREVIEW · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
