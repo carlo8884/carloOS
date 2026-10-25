@@ -41,7 +41,7 @@ export function HomeHero() {
             />
             <span
               className="text-2xs font-bold uppercase tracking-eyebrow"
-              style={{ color: '#1e140a' }}
+              style={{ color: 'var(--brand-accent-light)' }}
             >
               Horses.com
             </span>
