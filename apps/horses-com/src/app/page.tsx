@@ -1,1 +1,1 @@
-$(cat /tmp/horses-page.tsx)
+PLACEHOLDER
