@@ -6,7 +6,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, StockImage, SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
+import { buildMetadata, SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 import { BodyConditionScoreCalculator } from '../components/visual/BodyConditionScoreCalculator'
 import { DisciplineFilter } from '../components/DisciplineFilter'
 import { HomeHero } from '../components/HomeHero'
@@ -158,9 +158,6 @@ const TRUST_CHIPS = [
     imageAlt: 'A horse receiving routine care',
   },
 ]
-
-const FILL_IMAGE =
-  '[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none'
 
 const homeSchema = combineSchemas(
   buildOrganizationSchema({ siteId: 'horses-com', name: 'Horses.com', url: 'https://horses.com' }),
@@ -346,12 +343,9 @@ export default function HomePage() {
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Reference, maintained</h2>
             </div>
             <Link href="/health/equine-ulcers" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-              <div className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
-                <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
-              </div>
               <div className="pr-3 py-2">
                 <div className="mb-1">
-                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health</span>
+                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health <span aria-hidden="true">→</span></span>
                 </div>
                 <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
                   <span>When-to-call thresholds, no invented clinicians.</span>
