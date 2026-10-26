@@ -114,19 +114,6 @@ export function HomeGuides() {
               <span>Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.</span>
             </div>
           </div>
-          <Link
-            href="/tools"
-            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
-          >
-            <div className="px-4 py-2.5">
-              <div className="mb-1">
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators <span aria-hidden="true">→</span></div>
-              </div>
-              <div className="text-xs text-white/55 mt-0.5">
-                <span>Volume, stocking, heater, water change.</span>
-              </div>
-            </div>
-          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {CALCULATORS.map((tool) => (
