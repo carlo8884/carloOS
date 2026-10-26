@@ -2166,3 +2166,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-p-fe41b9-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
+
+---
+
+## 2026-10-25 ~20:12 PDT hour
+1. Fish.com homepage polish: the "Why this site" trust strip linked Editorial standards twice, once as a header-side text link and again as the first trust chip ("Source-grounded guides") right below it. Removed the header link so the strip is eyebrow plus four clean chips, same cleanup as #2936 and #2938. PR #2941.
+2. Deletion only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses homepage + /inquire and shared Footer inquire left alone. CI fully green.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-w-30115c-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
