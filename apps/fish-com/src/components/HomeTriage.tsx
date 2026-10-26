@@ -148,13 +148,6 @@ export function HomeTriage() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Why this site</span>
               </Link>
             </div>
-            <Link
-              href="/editorial-standards"
-              className="group flex items-center gap-2 no-underline"
-            >
-              <span className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</span>
-              <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-brand-primary transition-transform group-hover:translate-x-0.5" />
-            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {TRUST_CHIPS.map((item) => (
