@@ -2139,3 +2139,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-c-e72ac2-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
+
+---
+
+## 2026-10-25 ~17:12 PDT hour
+1. Fish.com homepage polish: the "How we work" section linked Editorial standards twice, once as a header-side link card and again as the chip right below it. Removed the header card so the section is heading, one paragraph and two clean chips (Editorial standards, Affiliate disclosure). PR #2936.
+2. Deletion only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses homepage + /inquire and shared Footer inquire left alone. CI: everything green except one dog-com e2e test that failed on a runner network error (ERR_NAME_NOT_RESOLVED for 127.0.0.1), unrelated to fish; main's previous ci run had also failed.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-h-156080-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
