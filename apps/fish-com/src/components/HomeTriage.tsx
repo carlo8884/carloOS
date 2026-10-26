@@ -110,13 +110,6 @@ export function HomeTriage() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Start where you are</span>
               </Link>
             </div>
-            <Link
-              href="/health"
-              className="group flex items-center gap-2 no-underline"
-            >
-              <span className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</span>
-              <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-[#3aa4cc] transition-transform group-hover:translate-x-0.5" />
-            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {PROBLEMS.map((p) => (
