@@ -285,7 +285,7 @@ export function HomeGuides() {
 
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
         <div>
-          <div className="max-w-3xl">
+          <div>
             <div className="flex items-end justify-between mb-4 flex-wrap gap-4">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
@@ -307,7 +307,7 @@ export function HomeGuides() {
               >
                 <div className="px-4 py-2">
                   <div className="mb-1">
-                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
+                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides <span aria-hidden="true">→</span></div>
                   </div>
                   <div className="text-xs text-white/55 mt-0.5">
                     <span>Filters, heaters, lighting, test kits.</span>
@@ -318,7 +318,7 @@ export function HomeGuides() {
             <div className="text-base text-white/70 leading-relaxed mb-6 max-w-xl">
               <span>Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {PRODUCT_CHIPS.map((item) => (
                 <Link
                   key={item.href}
