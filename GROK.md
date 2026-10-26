@@ -2157,3 +2157,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-c-c22b56-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
+
+---
+
+## 2026-10-25 ~19:08 PDT hour
+1. Fish.com homepage polish: the dark "Product guides" section was boxed into a narrow max-w-3xl column, so on desktop the four guide cards sat in a 2x2 block on the left half with the right half empty, and its "All product guides" header card sat inset unlike every other section. The section now spans full width like Species/Tank/Water/Equipment, the four guide cards sit in one row on large screens (2-up tablet, stacked mobile), and the header card gets the same → as the other section links. PR #2939.
+2. Classes only (plus the arrow): no new images, no manifest changes, no trainers, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses homepage + /inquire and shared Footer inquire left alone. CI fully green.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-p-fe41b9-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
