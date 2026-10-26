@@ -2175,3 +2175,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-w-30115c-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
+
+---
+
+## 2026-10-25 ~21:13 PDT hour
+1. Fish.com homepage polish: the "Start where you are" triage section linked /health twice, once from the eyebrow and again as a header-side "Health guides" link. Removed the header-side link so the section is eyebrow plus the six problem cards, same cleanup as #2936, #2938 and #2941. PR #2943.
+2. Deletion only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses homepage + /inquire and shared Footer inquire left alone. CI fully green.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-t-5aa36e-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT). Last run before the 9:59pm PT deadline; routine retired.
